@@ -1,0 +1,154 @@
+
+/* GENERAL */
+
+body {
+    background-color: #12121c;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    color: #bb86fc;
+}
+
+p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* SKIP LINK */
+
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    background: white;
+    color: black;
+    padding: 10px;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* NAVIGATION */
+
+nav {
+    background-color: #222233;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #bb86fc;
+}
+
+/* MAIN CONTENT */
+
+main {
+    width: 85%;
+    max-width: 1000px;
+    margin: 30px auto;
+    min-height: 400px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+}
+
+/* IMAGE BOX MODEL */
+
+img {
+    width: 100%;
+    border: 2px solid #bb86fc;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+/* GALLERY - GRID */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #222233;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* HOVER EFFECT */
+
+.card:hover {
+    background-color: #38304e;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* NTH-CHILD */
+
+.card:nth-child(even) img {
+    border-radius: 30px 5px 30px 5px;
+}
+
+.card:nth-child(odd) img {
+    border-radius: 5px 30px 5px 30px;
+}
+
+/* ABOUT PAGE */
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.about img {
+    width: 50%;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #222233;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about img {
+        width: 100%;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
